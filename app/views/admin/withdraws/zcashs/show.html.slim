@@ -1,0 +1,30 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @zcash.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @zcash, :id
+          = item_for @zcash, :created_at
+          = item_for @zcash, :aasm_state_text
+          hr.split
+          = item_for @zcash.member, :name
+          = item_for @zcash, :fund_extra
+          = item_for @zcash, :fund_uid do
+            span = @zcash.fund_uid.truncate(22)
+          = item_for @zcash, :amount
+          hr.split
+          = item_for @zcash, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @zcash.may_reject?
+              li
+                = link_to t('.reject'), url_for([:admin, @zcash]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @zcash.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @zcash]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @zcash.member}
+    = render partial: 'shared/admin/account', locals: {account: @zcash.account}

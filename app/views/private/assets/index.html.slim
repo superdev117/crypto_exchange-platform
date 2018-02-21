@@ -1,0 +1,40 @@
+= content_for :frame do
+  .container
+    ul.nav.nav-justified.assets-nav
+      li.active data-scroll-nav='0'
+        a = t('.liability-proof')
+      li        data-scroll-nav='1'
+        a = t('.btc-assets')
+      li        data-scroll-nav='2'
+        a = t('.cny-assets')
+      li        data-scroll-nav='3'
+        a = t('.ltc-assets')
+      li        data-scroll-nav='4'
+        a = t('.dsh-assets')
+      li        data-scroll-nav='5'
+        a = t('.zec-assets')
+      li        data-scroll-nav='6'
+        a = t('.xrp-assets')
+      li        data-scroll-nav='7'
+        a = t('.ppc-assets')
+      li        data-scroll-nav='8'
+        a = t('.nmc-assets')
+      li        data-scroll-nav='9'
+        a = t('.xmr-assets')
+    - if current_user
+      div data-scroll-index=0 = render 'liability_proof'
+
+    div data-scroll-index=1 = render 'btc_assets'
+    div data-scroll-index=1 = render 'ltc_assets'
+    div data-scroll-index=1 = render 'dsh_assets'
+    div data-scroll-index=1 = render 'zec_assets'
+    div data-scroll-index=1 = render 'xrp_assets'
+    div data-scroll-index=1 = render 'ppc_assets'
+    div data-scroll-index=1 = render 'nmc_assets'
+    div data-scroll-index=1 = render 'xmr_assets'
+    div data-scroll-index=1 = render 'eth_assets'
+    div data-scroll-index=1 = render 'blk_assets'
+    div data-scroll-index=1 = render 'rpt_assets'
+    div data-scroll-index=1 = render 'trt_assets'
+    div data-scroll-index=2 = render 'cny_assets'
+    div data-scroll-index=2 = render 'eur_assets'

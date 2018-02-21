@@ -1,0 +1,16 @@
+development: &defaults
+  adapter: mysql2
+  encoding: utf8
+  database: exchange_development
+  username: root
+  password:
+  pool: 10
+  reconnect: true
+
+test:
+  <<: *defaults
+  database: exchange_test
+
+production:
+  <<: *defaults
+  database: exchange_production

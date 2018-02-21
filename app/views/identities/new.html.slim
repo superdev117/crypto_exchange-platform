@@ -1,0 +1,19 @@
+= simple_form_for @identity, :url => '/auth/identity/register' do |f|
+  h1 Create Your Account
+  = f.input :email, :input_html => {:name => 'email', :autofocus => 'true'}
+  = f.input :password, :input_html => {:name => 'password'}
+  = f.input :password_confirmation, :input_html => {:name => 'password_confirmation'}
+  
+  #checkterm
+    input type="checkbox" style="margin-right:15px" By signin up an account, you agree to our terms and conditions
+
+  hr.split
+  /= f.button :wrapped, t('header.signup'), cancel: root_path
+  = f.button :wrapped, t('header.signup')
+  
+= content_for :guide do
+  img src="/signin_logo.png" style="width:100%;height:100%;"
+
+/= content_for :guide do
+  ul.list-unstyled
+    li: a href='#{signin_path}'= t('.signin')

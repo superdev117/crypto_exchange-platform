@@ -1,0 +1,11 @@
+- unless @one_zcashs.empty?
+  .panel.panel-primary
+    .panel-heading: span = t('.one')
+    = render partial: 'table', locals: {zcashs: @one_zcashs}
+- unless @all_zcashs.empty?
+  .panel.panel-success
+    .panel-heading: span = t('.all')
+    = render partial: 'table', locals: {zcashs: @all_zcashs}
+
+- if @all_zcashs.empty? and @one_zcashs.empty?
+  h3.text-info.text-center = t('.empty')

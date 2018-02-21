@@ -1,0 +1,30 @@
+.row
+  .col-xs-12
+    .panel.panel-primary
+      .panel-heading
+        span = t('.withdraw', sn: @dashcoin.id)
+      .panel-body
+        = description_for :withdraw do
+          = item_for @dashcoin, :id
+          = item_for @dashcoin, :created_at
+          = item_for @dashcoin, :aasm_state_text
+          hr.split
+          = item_for @dashcoin.member, :name
+          = item_for @dashcoin, :fund_extra
+          = item_for @dashcoin, :fund_uid do
+            span = @dashcoin.fund_uid.truncate(22)
+          = item_for @dashcoin, :amount
+          hr.split
+          = item_for @dashcoin, :remark
+          hr.split
+          ul.list-inline.pull-right
+            - if @dashcoin.may_reject?
+              li
+                = link_to t('.reject'), url_for([:admin, @dashcoin]), class: 'btn btn-danger', method: 'DELETE', confirm: t('.reject_confirm')
+            - if @dashcoin.may_process?
+              li
+                = link_to t('.process'), url_for([:admin, @dashcoin]), class: 'btn btn-primary', method: 'PATCH'
+
+  .col-xs-12
+    = render partial: 'shared/admin/member', locals: {member: @dashcoin.member}
+    = render partial: 'shared/admin/account', locals: {account: @dashcoin.account}

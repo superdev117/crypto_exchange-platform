@@ -1,0 +1,36 @@
+doctype html
+html lang="en"
+  head
+    link href="/favicon.ico" rel="shortcut icon"
+    = include_gon
+    - stylesheet = content_for?(:stylesheet) ? yield(:stylesheet) : "application"
+    link href="//fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css"
+    = stylesheet_link_tag stylesheet, media: "all"
+    = javascript_include_tag "application"
+    = javascript_include_tag "locales/#{I18n.locale}"
+    script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"
+    = yield(:scripts) if content_for?(:scripts)
+    = render 'shared/html5'
+    = render 'shared/meta'
+    = csrf_meta_tags
+
+  body id='#{body_id}' data-lang="#{locale_name}"
+    = render 'shared/alert'
+
+    #wrap
+      - if content_for?(:header)
+        = yield(:header)
+      - else
+        = render 'shared/header'
+      .header-sep style='height:98px'
+      - if content_for?(:frame)
+        = yield(:frame)
+      - else
+        = render 'shared/frame'
+
+      #push
+
+    - if content_for?(:footer)
+      = yield(:footer)
+    - else
+      = render 'shared/footer'

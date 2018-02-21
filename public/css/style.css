@@ -1,0 +1,282 @@
+header.navbar.navbar-default.navbar-static-top i{
+  margin-right: 10px;
+}
+header.navbar.navbar-default.navbar-static-top{
+  background: transparent;
+  border-bottom: 1px solid #575757;
+}
+ul.nav.navbar-nav.navbar-right li{
+  border: none !important;
+}
+header.navbar.navbar-default.navbar-static-top>.container{
+  width: 100% !important;
+}
+
+header.navbar.navbar-default.navbar-static-top>.container #logo img{
+  float: left;
+  width: 300px;
+  margin:auto;
+}
+#section1{
+  background-image: url(/landingpage/homepage_background1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 800px;
+  padding-left: 30%;
+  padding-right: 30%;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  text-align: center;
+}
+#section1 h1{
+  font-size: 40px;
+  color: white;
+}
+#section1 .get_started{
+  margin-top: 30px;
+  height: 70px;
+  width: 70%;
+  border: 1px solid grey;
+  border-radius: 4px;
+  padding: 5px;
+  margin: auto;
+}
+#section1 .get_started input:focus{
+  border: none;
+}
+#section1 .get_started input{
+  padding-left: 20px;
+  background-color: transparent;
+  border: none;
+  height: 100%;
+  color: white;
+  width: 70%;
+  float: left
+}
+#section1 .get_started a:hover{
+  background-color: white;
+  color: black;
+  border:1px solid black;
+}
+#section1 .get_started a{
+  cursor: pointer;
+  background-color: red;
+  color: white;
+  height: 100%;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  padding-top: 18px;
+  width:30%;
+  float: left;
+}
+#section1 h4{
+  margin-bottom: 30px;
+  color: grey;
+  line-height: 1.5em;
+}
+#section2{
+  padding-left: 20%;
+  padding-right: 20%;
+  height: 600px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  margin-bottom: 30px;
+}
+#section2 h1{
+  padding-bottom: 30px;
+  border-bottom: 1px solid lightgrey;
+  font-size:40px;
+}
+#section2 .featues{
+  margin-top: 50px;
+  width:30%;
+  margin-right:3%;
+  float: left;
+}
+
+#section2 .featues .left_panel{
+  float:left;
+  width:30%;
+  height: 100px;
+  margin-right: 5%;
+}
+.left_panel img{
+  width: 100%;
+  height: 100%;
+}
+#section2 .featues .right_panel i{
+  cursor: pointer;
+  margin-right: 10px;
+}
+#section2 .featues .right_panel a{
+  cursor: pointer;
+  font-weight: 100 !important;
+  color: grey;
+}
+#section2 .featues .right_panel{
+  float:left;
+  width:65%;
+}
+#section2 .featues .right_panel .feature_title{
+  margin-bottom: 20px;
+}
+#section2 .featues .right_panel .feature_content{
+  line-height: 1.5em;
+  height: 80px;
+}
+.right_panel .feature_title h4{
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.clear_both{
+  clear: both;
+}
+
+#section3{
+  display: flex;
+  width: 100%;
+  height: 175px;
+  background-image: url('/landingpage/homepage_background2.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#scroll_to_section2{
+  cursor: pointer;
+}
+#section3 .ticker{
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  flex:1;
+  border-right: 1px solid grey;
+}
+#section3 .ticker .ticker_name{
+  color: white;
+}
+#section3 .ticker .ticker_price{
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+#section3 .ticker .ticker_change{
+  font-size: 15x;
+}
+#section3 .ticker .ticker_change i{
+  font-size: 15px;
+  margin-right: 10px;
+}
+#section5, #section4{
+  display: flex;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-top: 100px;
+  padding-bottom: 100px;
+
+}
+.fundsecurity_left{
+  flex : 1;
+  align-self: center;
+}
+.fundsecurity_left img{
+  width: 100%;
+}
+.fundsecurity_right{
+  flex : 2;
+  border-left: 1px solid lightgrey;
+  margin-left: 50px;
+}
+.fundsecurity_right h1{
+  font-size: 40px;
+}
+.fundsecurity_right .above{
+  padding:30px;
+  border-bottom: 1px solid lightgrey
+}
+.fundsecurity_right .below{
+  padding-top: 30px;
+  padding-left: 30px;
+}
+.fundsecurity_right .below h4{line-height: 2em;}
+.securitycodex i{
+  cursor: pointer;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  border: 1px solid lightgrey;
+  padding: 20px;
+  color: red;
+}
+.securitycodex i:hover{
+  background-color: lightgray;
+}
+
+
+#section5{
+  color: white;
+  height: 400px;
+  background-image: url('/landingpage/homepage_background4.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+}
+.section5_left{
+  flex:3;
+}
+.section5_right{
+  padding-left: 10%;
+  align-self: center;
+  flex:2;
+}
+.section5_left h1{
+  margin-top: 0px;
+  font-size:40px;
+}
+.section5_right .create_account{
+  width: 100%;
+  padding: 20px;
+  border-radius: 4px;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.section5_right .create_account:hover{
+  color: black;
+  background-color: white;
+}
+.section5_right a:hover{
+  color: grey !important;
+}
+
+#section6 .above{
+  text-align: center;
+  margin-top: 50px;
+}
+#section6 .below .table_header{
+  font-size: 20px;
+  margin-top: 60px;
+  display: flex;
+}
+#section6 .below .table_body{
+  background-color: #f7f7f7;
+  font-size: 20px;
+  display: flex;
+}
+#section6 .below .table_body a{
+  font-weight: 100;
+  color: grey;
+  line-height: 2em;
+}
+#section6 .below .table_header .element{
+  font-weight: bold;
+  height: 60px;
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey;
+}
+#section6 .below .element{
+  padding:20px;
+  flex:1;
+}
